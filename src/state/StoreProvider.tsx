@@ -3,8 +3,9 @@ import {actionType, reducer, stateType} from './reducer'
 
 const initialState: stateType = {
     logged: false,
-    posts: [
+    blogs: [
         {
+            id: 1,
             title: 'Default title',
             content: 'Default content',
             comments: [

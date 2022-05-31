@@ -3,7 +3,8 @@ export type commentType = {
   author: string
 }
 
-export type postType = {
+export type blogType = {
+  id: string | number
   title: string
   content: string
   comments: commentType[]
@@ -11,15 +12,15 @@ export type postType = {
 
 export type stateType = {
   logged: boolean
-  posts: postType[]
+  blogs: blogType[]
 }
 
 export enum actionsEnum {
-  toggle_log = 'TOGGLE_LOG',
-  add_post = 'ADD_POST',
-  delete_post = 'DELETE_POST',
-  add_comment = 'ADD_COMMENT',
-  delete_comment = 'DELETE_COMMENT',
+  TOGGLE_LOG = 'TOGGLE_LOG',
+  ADD_POST = 'ADD_POST',
+  DELETE_POST = 'DELETE_POST',
+  ADD_COMMENT = 'ADD_COMMENT',
+  DELETE_COMMENT = 'DELETE_COMMENT',
 }
 
 export type actionType = {
@@ -29,15 +30,15 @@ export type actionType = {
 
 export const reducer = (state: stateType, action: actionType): stateType => {
   switch (action.type) {
-    case actionsEnum.toggle_log:
+    case actionsEnum.TOGGLE_LOG:
       return state
-    case actionsEnum.add_post:
+    case actionsEnum.ADD_POST:
       return state
-    case actionsEnum.delete_post:
+    case actionsEnum.DELETE_POST:
       return state
-    case actionsEnum.add_comment:
+    case actionsEnum.ADD_COMMENT:
       return state
-    case actionsEnum.delete_comment:
+    case actionsEnum.DELETE_COMMENT:
       return state
     default:
       throw new Error('Any of the actions in the state manager were matched')
