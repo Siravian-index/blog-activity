@@ -1,21 +1,10 @@
 import React, {createContext, useReducer} from 'react'
 import {actionType, reducer, stateType} from './reducer'
+import {blogsDummy} from "../utils/dummyData";
 
 const initialState: stateType = {
     logged: false,
-    blogs: [
-        {
-            id: 1,
-            title: 'Default title',
-            content: 'Default content',
-            comments: [
-                {
-                    comment: 'comment by default',
-                    author: 'Author of the comment by default',
-                },
-            ],
-        },
-    ],
+    blogs: blogsDummy
 }
 
 type Props = { children?: React.ReactNode }

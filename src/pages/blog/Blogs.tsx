@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../App.css'
 import {bringStateProvider} from "../../state/StoreProvider";
 import Blog from "../../components/Blog";
 

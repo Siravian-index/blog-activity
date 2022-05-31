@@ -7,7 +7,7 @@ interface INavbarProps {
 
 const Navbar: React.FunctionComponent<INavbarProps> = ({ logged }) => {
   return (
-    <nav className='navbar'>
+    <nav className='flex'>
       <Link to='/'>About me</Link>
       <Link to='/blog'>Blog</Link>
       <Link to='/portfolio'>Portfolio</Link>

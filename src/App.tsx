@@ -1,4 +1,3 @@
-import './App.css'
 import {bringStateProvider} from './state/StoreProvider'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import AboutMe from './pages/about_me/AboutMe'
