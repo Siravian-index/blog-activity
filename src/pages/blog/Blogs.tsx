@@ -6,9 +6,11 @@ const Blogs = () => {
     const {state: {blogs}} = bringStateProvider()
 
     return (
-        <div className='main_content'>
-            <h1>Recent Blogs</h1>
+        <div>
+            <h1 className='text-center text-xl my-5'>Recent Blogs</h1>
+            <div className='flex flex-col md:flex-row md:justify-around items-center'>
             {blogs.map((blog) => <Blog blog={blog} key={blog.id} />)}
+            </div>
         </div>
     )
 }

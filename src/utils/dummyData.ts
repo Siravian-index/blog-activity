@@ -1,21 +1,24 @@
-import {IPortafolio} from "../types";
+import {IKnowledge, IPortafolio} from "../types";
 import {blogType} from "../state/reducer";
 
 export const portafolioDummy: IPortafolio[] = [
     {
         id: 1,
         title: "To-do app",
-        url: "",
+        description: "a short description of the project",
+        url: "https://github.com/Siravian-index/sofkatU-challenge-front",
     },
     {
         id: 2,
         title: "Simple API",
-        url: "",
+        url: "https://github.com/Siravian-index/sofkatU-challenge-back",
+        description: "a short description of the project"
     },
     {
         id: 3,
-        title: "Reactive API",
-        url: "",
+        title: "Reactivity in Java",
+        url: "https://github.com/Siravian-index/lite-rx-api-hands-on",
+        description: "a short description of the project"
     }
 ]
 
@@ -55,3 +58,23 @@ export const blogsDummy: blogType[] = [
     },
 ]
 
+export const knoledgeDummy: IKnowledge[] = [
+    {
+        id: 1,
+        description: "I got enough of Javascript so I picked up Typescript",
+        mastery: 80,
+        skill: "Javascript"
+    },
+    {
+        id: 2,
+        description: "I can center a div",
+        mastery: 80,
+        skill: "CSS"
+    },
+    {
+        id: 3,
+        description: "Less nullPointerExceptions",
+        mastery: 70,
+        skill: "Java"
+    }
+]

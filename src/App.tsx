@@ -23,7 +23,7 @@ function App() {
                 <Route path='/portfolio' element={<Portfolio/>}/>
                 <Route path='/knowledge' element={<Knowledge/>}/>
             </Routes>
-            <Footer/>
+            {/*<Footer/>*/}
         </BrowserRouter>
     )
 }

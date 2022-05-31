@@ -7,11 +7,12 @@ interface IBlog {
 
 const Blog: React.FC<IBlog> = ({blog}) => {
 
+    const contentFormatted = `${blog.content.slice(0, 30)}...`
     return (
-        <div className='main_content'>
+        <div className=''>
             <h4>{blog.title}</h4>
             <div>
-                <p>{blog.content.slice(0, 50)}...</p>
+                <p>{contentFormatted}</p>
             </div>
         </div>
     )
