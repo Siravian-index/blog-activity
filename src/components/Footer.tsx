@@ -1,9 +1,10 @@
 import * as React from 'react'
 
-interface IFooterProps {}
+interface IFooterProps {
+}
 
-const Footer: React.FunctionComponent<IFooterProps> = (props) => {
-  return <footer className='footer'>This is my footer</footer>
+const Footer: React.FunctionComponent<IFooterProps> = ({}) => {
+    return <footer className='footer'>This is my footer</footer>
 }
 
 export default Footer
