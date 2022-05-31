@@ -5,34 +5,27 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import AboutMe from './pages/about_me/AboutMe'
 import Blog from './pages/blog/Blog'
 import BlogForm from './pages/blog_form/BlogForm'
+import Navbar from './components/Navbar'
+import Knowledge from './pages/knowledge/Knowledge'
+import Portfolio from './pages/portfolio/Portfolio'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  const {state} = useContext(Store)
-  console.log(state);
-  
+  const { state } = useContext(Store)
+  console.log(state)
 
   return (
-      <BrowserRouter>
-        <nav className='navbar'>
-          <Link to="/">About me</Link>
-          <Link to="/blog">Blog</Link>
-          {state.logged&&<Link to="/blog/form">Blog form</Link>}
-          {state.logged?<button>Log out</button>:<button>Log in</button>}
-        </nav>
-        {state.logged?
-          <Routes>
-            <Route path="/" element={<AboutMe />}/>
-            <Route path="/blog" element={<Blog />}/>
-            <Route path="/blog/form" element={<BlogForm />}/>
-          </Routes>:
-          <Routes>
-            <Route path="/" element={<AboutMe />}/>
-            <Route path="/blog" element={<Blog />}/>
-          </Routes>}      
-        <footer className='footer'>This is my footer</footer>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Navbar logged={state.logged} />
+      <Routes>
+        {state.logged && <Route path='/blog/form' element={<BlogForm />} />}
+        <Route path='/' element={<AboutMe />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/knowledge' element={<Knowledge />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
 
