@@ -61,7 +61,7 @@ export const blogsDummy: blogType[] = [
 export const knoledgeDummy: IKnowledge[] = [
     {
         id: 1,
-        description: "I got enough of Javascript so I picked up Typescript",
+        description: "I love typescript",
         mastery: 80,
         skill: "Javascript"
     },
