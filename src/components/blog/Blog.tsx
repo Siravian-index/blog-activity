@@ -1,5 +1,5 @@
 import React from 'react'
-import {blogType} from "../app/features/blogSlice";
+import {blogType} from "../../app/features/blogSlice";
 
 interface IBlog {
     blog: blogType
