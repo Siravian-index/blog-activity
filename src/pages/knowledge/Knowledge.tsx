@@ -1,11 +1,11 @@
 import * as React from 'react'
-import {knoledgeDummy, portafolioDummy} from "../../utils/dummyData";
+import {knowledgeDummy} from "../../utils/dummyData";
 
 interface IKnowledgeProps {}
 
 const Knowledge: React.FC<IKnowledgeProps> = (props) => {
 
-    const data = knoledgeDummy.map(({id, mastery, description,skill}) => {
+    const data = knowledgeDummy.map(({id, mastery, description,skill}) => {
         return (<div key={id} className="w-1/3 my-4">
                 <h4>{skill}</h4>
                 <p>{description}</p>

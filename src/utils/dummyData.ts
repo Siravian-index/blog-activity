@@ -1,5 +1,5 @@
 import {IKnowledge, IPortafolio} from "../types";
-import {blogType} from "../state/reducer";
+import {blogType} from "../types/blogTypes";
 
 export const portafolioDummy: IPortafolio[] = [
     {
@@ -58,7 +58,7 @@ export const blogsDummy: blogType[] = [
     },
 ]
 
-export const knoledgeDummy: IKnowledge[] = [
+export const knowledgeDummy: IKnowledge[] = [
     {
         id: 1,
         description: "I love typescript",

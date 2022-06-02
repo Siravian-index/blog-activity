@@ -1,4 +1,4 @@
-import {bringStateProvider} from './state/StoreProvider'
+import {bringStateProvider} from './app/StoreProvider'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import AboutMe from './pages/about_me/AboutMe'
 import Blog from './components/Blog'
@@ -7,7 +7,7 @@ import Navbar from './components/Navbar'
 import Knowledge from './pages/knowledge/Knowledge'
 import Portfolio from './pages/portfolio/Portfolio'
 import Footer from './components/Footer'
-import Blogs from "./pages/blog/Blogs";
+import Blogs from './pages/blog/Blogs'
 
 function App() {
     const {state} = bringStateProvider()

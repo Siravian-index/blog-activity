@@ -1,5 +1,5 @@
 import React from 'react'
-import {blogType} from "../state/reducer";
+import {blogType} from "../types/blogTypes";
 
 interface IBlog {
     blog: blogType
