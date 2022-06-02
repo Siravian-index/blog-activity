@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 
 export type commentType = {
@@ -14,17 +14,23 @@ export type blogType = {
     comments: commentType[]
 }
 
+
+
 const initialState: blogType[] = []
 
 export const blogSlice = createSlice({
-    name: "blogSlice",
+    name: "blogs",
     initialState,
     reducers: {
-        addBlog: (state, action) => {
-
+        addBlog: (state, action: PayloadAction<blogType>) => {
+            state.push(action.payload)
         },
-        addCommentToPost: (state, action) => {
+        addCommentToPost: (state, action: PayloadAction<commentType>) => {
 
         }
     }
 })
+
+
+const blogReducer = blogSlice.reducer
+export default blogReducer

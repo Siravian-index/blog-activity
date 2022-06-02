@@ -1,12 +1,11 @@
 import React from 'react'
-import {blogType} from "../types/blogTypes";
+import {blogType} from "../app/features/blogSlice";
 
 interface IBlog {
     blog: blogType
 }
 
 const Blog: React.FC<IBlog> = ({blog}) => {
-
     const contentFormatted = `${blog.content.slice(0, 30)}...`
     return (
         <div className=''>
